@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+.DaImagemPrincipal{
+    margin: auto;
+}
+
+img{
+    height: 150px;
+}
+
+nav{
+    margin: auto;
+}
+
+a.menus{
+    padding: 20px 40px 20px 40px;
+    color: rgba(51, 51, 51, 0.849);
+    text-decoration: none;
+    font-size: 20px ;
+}
+
+a:hover.menus{
+    background-color: #107CE4;
+    padding: 13px 13px 13px 13px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    color: aliceblue;
+}
+
+.fotoBUS{
+    width: 23px;
+    height: 23px;
+}
+
+.fotoAVIAO{
+    width: 23px;
+    height: 23px;
+}
+
+.fotoMALA{
+    width: 23px;
+    height: 23px;
+
+}
+
+.fotoOFERTA{
+    width: 23px;
+    height: 23px;
+}
+
+.fotoCARRO{
+    width: 23px;
+    height: 23px;
+}
+
+.fotoHOSPEDAGEM{
+    width: 23px;
+    height: 23px;
+}
+
+/* --- ESTILIZAÇÃO DO CONTÊINER DA BARRA DE BUSCA (Centralização) --- */
+.search-bar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto; 
+}
+
+/* --- CONTÊINER PRINCIPAL (A BARRA INTEIRA) --- */
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    height: 90px;
+    overflow: hidden; 
+    font-family: Arial, sans-serif;
+}
+
+/* --- ESTILO BASE PARA O BOTÃO (Remove o estilo padrão do navegador) --- */
+.input-group, .swap-icon {
+    /* Reseta o botão para parecer uma div */
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit; /* Remove o contorno padrão em navegadores */
+}
+
+/* --- AGRUPAMENTO DE CAMPOS FLEXÍVEIS (Contêineres) --- */
+.field-container {
+    display: flex;
+    align-items: stretch;
+    /* Estilos de borda e flex-grow conforme a imagem */
+}
+
+.field-container.origin-destination-group {
+    flex-grow: 2.5; 
+}
+
+.field-container.dates-container {
+    flex-grow: 1.5; 
+    border-left: 1px solid #eee;
+}
+
+/* --- ESTILO INDIVIDUAL DOS BOTÕES DE CAMPO (.input-group) --- */
+.input-group {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 18px; 
+    border-right: 1px solid #eee;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    text-align: left; /* Alinha o texto à esquerda (importante para botões) */
+}
+
+/* Estilo específico para o campo Passageiros/Classe */
+.input-group.travelers {
+    flex-grow: 1; 
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+/* Remove a borda direita do último campo do grupo */
+.field-container .input-group:last-child {
+    border-right: none;
+}
+
+
+/* 🖱️ EFEITO VISUAL AO PASSAR O MOUSE (HOVER) */
+.input-group:hover, .input-group:focus {
+    background-color: #f7f7f7; 
+    box-shadow: none; /* Mantém o foco limpo */
+}
+
+
+/* --- ESTILO DOS RÓTULOS E VALORES (Inalterados, mas agora dentro de um botão) --- */
+label {
+    font-size: 10px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.input-content {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.input-content i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.input-content .value {
+    font-weight: bold;
+    color: #000;
+}
+
+.input-content .placeholder {
+    color: #888;
+}
+
+/* --- ÍCONE DE TROCA (O ícone também é um botão menor) --- */
+.swap-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    align-self: center; 
+    border-radius: 50%;
+    color: #007bff;
+    font-size: 12px;
+    position: relative;
+    right: 12px; 
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.swap-icon i {
+    transform: rotate(90deg); 
+    margin: 0;
+    color: #007bff;
+}
+
+
+/* --- BOTÃO BUSCAR (Inalterado) --- */
+.search-button {
+    background-color: #ff9900;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 0 30px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0; 
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #e68a00;
+}
